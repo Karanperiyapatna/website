@@ -46,6 +46,11 @@
 		
     </head>
     <body>
+		<script src="config.js"></script>
+			<script>
+			document.getElementById("jobLink").href = CONFIG.JOB_URL;
+			document.getElementById("agentLink").href = CONFIG.AGENT_URL;
+			</script>
 	
 		<!-- Preloader -->
         <div class="preloader">
@@ -134,11 +139,16 @@
 											</li>
 											<li><a href="service.html">Services </a></li>
 											<li><a href="#">Career <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="hire-job.html">Looking For Job</a></li>
-													<li><a href="agent-registration.html">Agent Registration</a></li>
-												
-												</ul>
+											<ul class="dropdown">
+												<li><a id="jobLink">Looking For Job</a></li>
+												<li><a id="agentLink">Agent Registration</a></li>
+											</ul>
+											<script src="config.js"></script>
+												<script>
+												document.getElementById("jobLink").href = CONFIG.JOB_URL;
+												document.getElementById("agentLink").href = CONFIG.AGENT_URL;
+												</script>
+
 											</li>
 											<li><a href="about.html">About</a></li>
 

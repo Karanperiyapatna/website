@@ -99,8 +99,23 @@
 						<div class="col-lg-6 col-md-7 col-12">
 							<!-- Top Contact -->
 							<ul class="top-contact">
-								<li><i class="fa fa-phone"></i>+91-9986909171</li>
-								<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">support@digilaboursolutions.com</a></li>
+								<ul>
+									<li id="supportPhone">
+										<i class="fa fa-phone"></i>
+									</li>
+									<li id="supportEmail">
+										<i class="fa fa-envelope"></i>
+									</li>
+								</ul>
+
+								<script>
+								// Inject values dynamically
+								document.getElementById("supportPhone").innerHTML = 
+									`<i class="fa fa-phone"></i> ${CONFIG.SUPPORT_CONTACT_NO}`;
+
+								document.getElementById("supportEmail").innerHTML = 
+									`<i class="fa fa-envelope"></i> <a href="mailto:${CONFIG.SUPPORT_EMAIL}">${CONFIG.SUPPORT_EMAIL}</a>`;
+								</script>
 							</ul>
 							<!-- End Top Contact -->
 						</div>

@@ -108,8 +108,23 @@
 						<div class="col-lg-6 col-md-7 col-12">
 							<!-- Top Contact -->
 							<ul class="top-contact">
-								<li><i class="fa fa-phone"></i>+91-9986909171</li>
-								<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">support@digilaboursolution.com</a></li>
+								<ul>
+									<li id="supportPhone">
+										<i class="fa fa-phone"></i>
+									</li>
+									<li id="supportEmail">
+										<i class="fa fa-envelope"></i>
+									</li>
+								</ul>
+
+								<script>
+								// Inject values dynamically
+								document.getElementById("supportPhone").innerHTML = 
+									`<i class="fa fa-phone"></i> ${CONFIG.SUPPORT_CONTACT_NO}`;
+
+								document.getElementById("supportEmail").innerHTML = 
+									`<i class="fa fa-envelope"></i> <a href="mailto:${CONFIG.SUPPORT_EMAIL}">${CONFIG.SUPPORT_EMAIL}</a>`;
+								</script>
 							</ul>
 							<!-- End Top Contact -->
 						</div>
@@ -462,7 +477,14 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-12">
 						<div class="content">
-							<h2>Looking for Skilled Labor? Call @ +91-9986909171</h2>
+							<h2 id="supportContact">Looking for Skilled Labor? Call @ </h2>
+
+							<script>
+							// Inject the contact number into the heading
+							document.getElementById("supportContact").innerHTML = 
+								`Looking for Skilled Labor? Call @ ${CONFIG.SUPPORT_CONTACT_NO}`;
+							</script>
+
 							<p>We provide verified and skilled laborers for various industries. Get in touch today for reliable workforce solutions..</p>
 							<div class="button">
 								<a href="#" class="btn">Hire Now</a>

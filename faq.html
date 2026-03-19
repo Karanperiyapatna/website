@@ -182,11 +182,16 @@
 											</li>
 											<li><a href="service.html">Services </a></li>
 											<li><a href="#">Careers <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="hire-job.html">Looking For Job</a></li>
-													<li><a href="agent-registration.html">Agent Registration</a></li>
-													<li><a href="demant-registration.html">Demant Registration</a></li>
+												<ul class="dropdown"  id="menuDropdown">
+													<li><a id="jobLink" href="#">Looking For Job</a></li>
+													<li><a id="partnerLink" href="#">Become Partner</a></li>
 												</ul>
+												<script>
+													// Example config file (could be external JSON or JS)
+													// Inject links dynamically
+													document.getElementById("jobLink").href = config.JOB_LINK;
+													document.getElementById("partnerLink").href = config.PARTNER_LINK;
+												</script>
 											</li>
 											<li><a href="contact.html">Contact Us</a></li>
 										</ul>

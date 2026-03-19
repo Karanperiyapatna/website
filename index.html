@@ -1061,15 +1061,23 @@
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6 col-12">
-							<div class="single-footer">
-								<h2>Newsletter</h2>
-								<p>Subscribe to our newsletter for job updates, new worker availability, and special offers.</p>
-								<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-									<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
-										onblur="this.placeholder = 'Your email address'" required="" type="email">
-									<button class="button"><i class="icofont icofont-paper-plane"></i></button>
-								</form>
-							</div>
+						<div class="single-footer">
+							<h2>Contact Us</h2>
+							<p>
+							Support Team :
+							<span id="supportEmail" style="font-weight:500; color:#333;"></span>
+							</p>
+							<p>
+							Contact Number :
+							<span id="contactNumber" style="font-weight:500; color:#333;"></span>
+							</p>
+						</div>
+						</div>
+						<script src="config.js"></script>
+							<script>
+							document.getElementById("supportEmail").textContent = CONFIG.SUPPORT_EMAIL;
+							document.getElementById("contactNumber").textContent = CONFIG.CONTACT_NUMBER;
+							</script>
 						</div>
 					</div>
 				</div>

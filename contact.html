@@ -254,14 +254,12 @@
 								📞 <strong>Phone:</strong> 
 								<span id="contactPhone" style="margin-left:5px;"></span>
 							</p>
-							
 							<p>
 								📧 <strong>Email:</strong> 
 								<span id="contactEmail" style="margin-left:5px;"></span>
 							</p>
 
 							</div>
-
 						</div>
 						</div>
 					</div>
@@ -278,17 +276,35 @@
 					
 					emailEl.innerHTML = `<a href="mailto:${CONFIG.SUPPORT_EMAIL}" style="color:#007bff; text-decoration:none;">${CONFIG.SUPPORT_EMAIL}</a>`;
 					</script>
+
 				<div class="contact-info">
+
 					<div class="row">
 						<!-- single-info -->
 						<div class="col-lg-4 col-12 ">
 							<div class="single-info">
-								<i class="icofont icofont-ui-call"></i>
-								<div class="content">
-									<h3>+91-9986909171</h3>
-									<p>contact@digilaboursolutions.com</p>
-								</div>
+									<i class="icofont icofont-ui-call"></i>
+									<div class="content">
+										<h3 id="contactPhone"></h3>
+										<p id="contactEmail"></p>
+									</div>
+									</div>
 							</div>
+							<script src="config.js"></script>
+							<script>
+								const phoneEl = document.getElementById("contactPhone");
+								const emailEl = document.getElementById("contactEmail");
+
+								phoneEl.innerHTML = `<a href="tel:${CONFIG.CONTACT_NUMBER}" 
+									style="color:inherit; text-decoration:none;">
+									${CONFIG.CONTACT_NUMBER}
+								</a>`;
+
+								emailEl.innerHTML = `<a href="mailto:${CONFIG.SUPPORT_EMAIL}" 
+									style="color:inherit; text-decoration:none;">
+									${CONFIG.SUPPORT_EMAIL}
+								</a>`;
+							</script>
 						</div>
 						<!--/End single-info -->
 						<!-- single-info -->
@@ -302,6 +318,7 @@
 							</div>
 						</div>
 						<!--/End single-info -->
+
 						<!-- single-info -->
 						<div class="col-lg-4 col-12 ">
 							<div class="single-info">
@@ -314,6 +331,7 @@
 						</div>
 						<!--/End single-info -->
 					</div>
+
 				</div>
 			</div>
 		</section>

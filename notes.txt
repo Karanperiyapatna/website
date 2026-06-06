@@ -1,0 +1,6 @@
+
+
+To run the script in local machine
+
+python -m http.server 8000
+
